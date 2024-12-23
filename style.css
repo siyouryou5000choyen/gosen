@@ -1,0 +1,15 @@
+@charset "ShiftJIS";
+nav ul {
+    margin: 0 Auto;
+    padding: 0;
+    line-height: 32px;
+    text-align: centr;
+    word-spacing: 1.5em;
+}
+nav li {
+    display: inline;
+    margin:   0.5rem 0;
+}
+a {
+    text-decoration :none;
+}
