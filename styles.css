@@ -1,0 +1,89 @@
+/* 全体のリセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ヘッダーのスタイル */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;  /* 右端に寄せる */
+    padding: 20px 30px;  /* ヘッダーの縦の間隔を広げる */
+    background-color: #333;
+    color: white;
+    position: relative;
+    height: 50px;  /* ヘッダーを少し縦に長くする */
+}
+
+/* ロゴを左端に寄せる */
+.logo img {
+    width: 19%;  /* 画像サイズの調整 */
+    height: auto;
+    transition: filter 0.3s ease; /* マウスカーソルに触れると色が変わる */
+}
+
+/* ナビゲーションメニューを中央に寄せる */
+.nav-menu {
+    display: flex;
+    justify-content: left;
+    flex-grow: 1;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0px 50px;  /* 要素の間隔を調整 */
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease; /* マウスカーソルに触れると色が変わる */
+}
+
+.nav-menu a:hover {
+    color: #ff6347; /* ホバー時に色が変わる */
+}
+
+
+
+/* ロゴにカーソルが触れると色を変える */
+.logo img:hover {
+    filter: brightness(0.7);  /* 色を暗くして効果を与える */
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;  /* ヘッダー内の要素を縦に並べる */
+        align-items: flex-end; /* 右端に寄せる */
+        padding: 20px 10px;  /* パディングを調整 */
+        height: 120px;  /* スマホでも少し縦長に */
+    }
+
+    .logo img {
+        width: 120px;  /* ロゴ画像のサイズを小さく */
+        margin-bottom: 10px;  /* ロゴとナビゲーションメニューの間隔を調整 */
+    }
+
+    .nav-menu ul {
+        flex-direction: column;  /* メニューアイテムを縦に並べる */
+        align-items: center; /* 中央寄せ */
+    }
+
+    .nav-menu li {
+        margin: 10px 0;  /* メニューアイテムの間隔を広げる */
+    }
+
+    .right-space {
+        display: none;  /* スマホでは右端の余白を非表示 */
+    }
+}
